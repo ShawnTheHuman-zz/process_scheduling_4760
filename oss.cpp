@@ -125,9 +125,9 @@ int main(int argc, char * argv[])
 	alarm(maxTime);
 
 	// initialize semaphore
-	mutex = ftok("makefile", 1);
+	mutex = ftok("makefile", 552543);
 	semID = semget(mutex, 1, 0666 | IPC_CREAT);
-	cout << semID << endl;
+	//cout << semID << endl;
 	semctl(semID, 0, SETVAL, 0);
 	sprintf(semIDstr, "%d", semID);
 	//cout << semIDstr << endl;
