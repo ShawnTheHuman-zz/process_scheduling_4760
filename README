@@ -1,0 +1,21 @@
+Shawn Brown
+
+Project 4
+CS4760
+
+
+
+Compiles with just "make" command as usual
+
+	- "make clean" removes objects and logfile
+INVOCATION:
+	oss [-h] [-s t] [-l f]	
+
+	-h Describe how the project should be run and then, terminate.
+	-s t Indicate how many maximum seconds before the system terminates
+	-l f Specify a particular name for the log file
+
+
+I've spent alot of time trying to debug, but its pretty hard clunky **SLOW** and cumbersome in this
+system. The program is segfaulting when it prints to the file so I believe theres an allocation issue. 
+Will continue to work on it but i have to turn in somthing. 
