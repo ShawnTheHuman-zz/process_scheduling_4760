@@ -15,7 +15,7 @@ INVOCATION:
 	-s t Indicate how many maximum seconds before the system terminates
 	-l f Specify a particular name for the log file
 
+Issues:
+	This isnt finished but it compiles and calls the child but its failing in
+	child program. needs alot more work. 
 
-I've spent alot of time trying to debug, but its pretty hard clunky **SLOW** and cumbersome in this
-system. The program is segfaulting when it prints to the file so I believe theres an allocation issue. 
-Will continue to work on it but i have to turn in somthing. 
