@@ -41,7 +41,7 @@ queue<int> finishedQ;
 
 */
 void logReport();
-void addToReport(int);
+void modify_log(int);
 void signal(int);
 void incrementTime(unsigned int *, int, int);
 void createProc();
@@ -298,7 +298,7 @@ void createProc()
 		}
 		else if( pid == 0 )
 		{
-			char *args[] = {"./child", sysClockstr, semIDstr, pcbStr, procIndex, NULL};
+			char *args[] = {"./child", "./child", sysClockstr, semIDstr, pcbStr, procIndex, NULL};
 			execvp(args[0], args);
 			exit(-1);
 
@@ -355,7 +355,7 @@ void scheduler()
 			fprintf(logfile, "OSS: proccess %d has finished. %d:%d\n", procIndex, sysClock[0], sysClock[1]);
 			
 			finishedQ.push(procIndex);
-			addToReport(procIndex);
+			modify_log(procIndex);
 			totalCompleted++;
 		} 
 		else if(pcb[procIndex].terminated)
@@ -397,7 +397,7 @@ void scheduler()
 }
 
 // increments process time for the log
-void addToReport(int procIndex)
+void modify_log(int procIndex)
 {
 	totalWaitSec += pcb[procIndex].waitSec;
 	totalWaitNano += pcb[procIndex].waitNano;

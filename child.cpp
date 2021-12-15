@@ -33,10 +33,10 @@ int main(int argc, char * argv[])
 	signal(SIGTERM, sigHandler);
 	signal(SIGINT, sigHandler);
 	
-	sysClockID = atoi(argv[1]);
-	semID = atoi(argv[2]);
-	pcbID = atoi(argv[3]);
-	int procIndex = atoi(argv[4]);
+	sysClockID = atoi(argv[2]);
+	semID = atoi(argv[3]);
+	pcbID = atoi(argv[4]);
+	int procIndex = atoi(argv[5]);
 
 	sysClock = (unsigned int*) shmat(sysClockID, (void*)0, 0);
 	pcb = (PCB*)shmat(pcbID, (void*)0,0);
